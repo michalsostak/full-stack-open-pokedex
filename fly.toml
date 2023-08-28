@@ -13,7 +13,7 @@ primary_region = "ams"
   app = "node app.js"
 
 [env]
-  PORT = "3000"
+  PORT = "8080"
 
 [experimental]
   auto_rollback = true
@@ -31,7 +31,7 @@ primary_region = "ams"
   processes = ["app"]
 
 [[services]]
-  # internal_port = 8080
+  internal_port = 8080
   processes = ["app"]
 
 [[services.tcp_checks]]
