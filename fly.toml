@@ -28,7 +28,6 @@ primary_region = "ams"
   processes = ["app"]
 
 [[services]]
-  http_checks = []
   internal_port = 8080
   processes = ["app"]
 
