@@ -6,7 +6,8 @@ module.exports = {
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:cypress/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -45,5 +46,10 @@ module.exports = {
     ],
     "no-console": "error",
     "react/prop-types": 0
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
