@@ -15,6 +15,9 @@ primary_region = "ams"
 [env]
   PORT = "3000"
 
+[experimental]
+  auto_rollback = true
+
 [build]
   [build.args]
     NODE_VERSION = "16.20.2"
@@ -28,7 +31,7 @@ primary_region = "ams"
   processes = ["app"]
 
 [[services]]
-  internal_port = 8080
+  # internal_port = 8080
   processes = ["app"]
 
 [[services.tcp_checks]]
@@ -39,7 +42,7 @@ primary_region = "ams"
 
 [[services.http_checks]]
   interval = 10000
-  grace_period = "5s"
+  grace_period = "10s"
   method = "get"
   path = "/health"
   protocol = "http"
