@@ -75,6 +75,7 @@ jobs:
         with:
             severity: error
             details: Test Failed!
+            description: ${{ github.event.commits[0].author.name }} caused an issue with the following commit ${{ github.event.commits[0].url }}
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Test Cancelled
         uses: rjstone/discord-webhook-notify@v1
