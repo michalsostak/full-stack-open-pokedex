@@ -9,7 +9,6 @@ on:
     types: [opened, synchronize]
 
 jobs:
-
   simple_deployment_pipeline:
     runs-on: ubuntu-20.04
     steps:
@@ -32,9 +31,9 @@ jobs:
           start: npm run start-prod
           wait-on: http://localhost:5000
 
-
   deploy:
     name: Deploy app
+    if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
