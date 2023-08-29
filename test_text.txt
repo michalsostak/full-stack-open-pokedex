@@ -1,2 +1,3 @@
 text for a new branch commit
 more text added for another commit
+more text
